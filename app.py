@@ -61,7 +61,7 @@ def search():
     con = MySQLdb.connect(
         user='root',
         passwd='password',
-        host='192.168.0.73',
+        host= os.environ['MYSQL_HOST'],
         db='mydb',
         charset='utf8')
     cur = con.cursor()
@@ -96,7 +96,7 @@ def regdb():
     con = MySQLdb.connect(
         user='root',
         passwd='password',
-        host='192.168.0.73',
+        host= os.environ['MYSQL_HOST'],
         db='mydb',
         charset='utf8')
     cur = con.cursor()
